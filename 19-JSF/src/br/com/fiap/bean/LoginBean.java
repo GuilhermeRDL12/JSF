@@ -9,14 +9,16 @@ public class LoginBean {
 	private String senha;
 	private boolean termo;
 	
-	public void logar() {
+	public String logar() {
 		if("guilherme".equals(getLogin()) && "1234".equals(getSenha())) {
 			System.out.println("Usuário logado: " + getLogin());
+			System.out.println(isTermo());
+			return "carrinho";
 		}else {
 			System.out.println("Usuário não autorizado");
+			return "login";
 		}
 		
-		System.out.println("Checkbox Conectado: " + termo);
 	}
 	
 	public LoginBean() {
